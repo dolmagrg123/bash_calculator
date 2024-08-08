@@ -7,4 +7,11 @@
 # Handle division by zero with an appropriate error message.
 
 
+echo "Please enter two integers"
+read var1 var2
+
+# echo "First value: $var1"
+# echo "Second value: $var2"
+
+
 
