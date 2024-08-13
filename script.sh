@@ -89,7 +89,6 @@ else
         result=$((var1/var2))
         echo "$line"
 	    echo "$var1 divided by $var2 is $result"
-        echo "Invalid choice. Please enter a number between 1 and 4."
     fi
 
 fi
