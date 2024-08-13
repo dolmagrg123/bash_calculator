@@ -15,12 +15,13 @@ main() {
         var_name="$2"
         input=""
 
+        #loop until user enters a value
         while true; do
-            read -p "$prompt" input
-            if [[ -z "$input" ]]; then
+            read -p "$prompt" input #print the message until valid input
+            if [[ -z "$input" ]]; then #check if input is null or not using -z, -z return true if string is empty
                 echo "Error: Input cannot be empty. Please try again."
             else
-                eval "$var_name='$input'"
+                eval "$var_name='$input'" # Uses eval to dynamically assign the value of input to the variable named by var_name
                 break
             fi
         done
@@ -37,10 +38,11 @@ main() {
     echo "Second value: $var2"
 }
 
-main
+main #call the main function
 
+#Function to read input for operator Choice
 choose_operator(){
-echo -e "Choose an operation\n0.To Quit\n1.For Addition\n2.For Subtraction\n3.For Multiplication\n4.For Division"
+echo -e "Choose an operation\n0.To Quit\n1.For Addition\n2.For Subtraction\n3.For Multiplication\n4.For Division\n"
 
 # Read user input
 read -p "Enter your choice (0-4): " choice
@@ -56,7 +58,7 @@ done
 # Handle the user's input
 if [ "$choice" == "0" ];then
     echo "Quitting"
-    exit 0
+    exit 0 # exit 0 since the program is exiting without any erros
 elif [ "$choice" == "1" ];then
     echo "You selected Option 1."
 	result=$(($var1+$var2))
@@ -71,7 +73,7 @@ elif [ "$choice" == "3" ];then
 	echo "$var1 multiplied by $var2 is $result"
 else
     echo "You selected Option 4."
-    if [[ "$var2" == 0]];then
+    if [[ "$var2" == 0]];then #condition to check if value is 0
         echo "Error: Division by zero not allowed"
 	else
         result=$((var1/var2))
