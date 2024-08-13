@@ -58,25 +58,25 @@ done
 
 # Handle the user's input
 if [ "$choice"=="0" ];then
-        echo "Quitting"
-        exit 0
+    echo "Quitting"
+    exit 0
 elif [ "$choice"=="1" ];then
-        echo "You selected Option 1."
-	    result=$((var1+var2))
-        echo "$var1 added to $var2 is $result"
+    echo "You selected Option 1."
+	result=$((var1+var2))
+    echo "$var1 added to $var2 is $result"
 elif [ "$choice"=="2" ];then
-        echo "You selected Option 2."
-        result=$((var1-var2))
-        echo "$var1 subtract $var2 is $result"
+    echo "You selected Option 2."
+    result=$((var1-var2))
+    echo "$var1 subtract $var2 is $result"
 elif [ "$choice"=="3" ];then
-        echo "You selected Option 3."
-	    result=$((var1*var2))
-	    echo "$var1 multiplied by $var2 is $result"
+    echo "You selected Option 3."
+	result=$((var1*var2))
+	echo "$var1 multiplied by $var2 is $result"
 else
-        echo "You selected Option 4."
-	    result=$((var1/var2))
-	    echo "$var1 divided by $var2 is $result"
-        echo "Invalid choice. Please enter a number between 1 and 4."
+    echo "You selected Option 4."
+	result=$((var1/var2))
+	echo "$var1 divided by $var2 is $result"
+    echo "Invalid choice. Please enter a number between 1 and 4."
 
 fi
 
