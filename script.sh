@@ -29,13 +29,13 @@ get_input() {
 # Main script
 main() {
     # Get the first value
-    value1=$(get_input "Enter the first value: ")
+    var1=$(get_input "Enter the first value: ")
 
     # Get the second value
-    value2=$(get_input "Enter the second value: ")
+    var2=$(get_input "Enter the second value: ")
 
     # Display the entered values
-    echo "You entered: Value 1 = '$value1' and Value 2 = '$value2'"
+    echo "You entered: Value 1 = '$var1' and Value 2 = '$var2'"
 }
 
 # Call the main function
