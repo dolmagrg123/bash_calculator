@@ -28,10 +28,10 @@ main() {
     }
 
     # Get the first value, call function get_value with first argument as message and second argument var1
-    get_value "Enter first Value: \n" var1
+    get_value "Enter first Value: " var1
 
     # Get the second value, call function get_value with first argument as message and second argument var2
-    get_value "Enter Second Value: \n" var2
+    get_value "Enter Second Value: " var2
 
     # Display the values entered
     echo "First value: $var1"
