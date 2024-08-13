@@ -62,7 +62,7 @@ if [ "$choice" == "0" ];then
     exit 0
 elif [ "$choice" == "1" ];then
     echo "You selected Option 1."
-	result=$((var1+var2))
+	result=$(($var1+$var2))
     echo "$var1 added to $var2 is $result"
 elif [ "$choice" == "2" ];then
     echo "You selected Option 2."
