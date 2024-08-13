@@ -60,15 +60,15 @@ done
 if [ "$choice"=="0" ];then
         echo "Quitting"
         exit 0
-elif [ "$choice"=="1"];then
+elif [ "$choice"=="1" ];then
         echo "You selected Option 1."
 	    result=$((var1+var2))
         echo "$var1 added to $var2 is $result"
-elif [ "$choice"=="2"];then
+elif [ "$choice"=="2" ];then
         echo "You selected Option 2."
         result=$((var1-var2))
         echo "$var1 subtract $var2 is $result"
-elif [ "$choice"=="3"];then
+elif [ "$choice"=="3" ];then
         echo "You selected Option 3."
 	    result=$((var1*var2))
 	    echo "$var1 multiplied by $var2 is $result"
