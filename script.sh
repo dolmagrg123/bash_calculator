@@ -69,9 +69,12 @@ elif [ "$choice" == "3" ];then
 	echo "$var1 multiplied by $var2 is $result"
 else
     echo "You selected Option 4."
-	result=$((var1/var2))
-	echo "$var1 divided by $var2 is $result"
-    echo "Invalid choice. Please enter a number between 1 and 4."
+    if [[ "$var2" == 0]];then
+        echo "Error: Division by zero not allowed"
+	else
+        result=$((var1/var2))
+	    echo "$var1 divided by $var2 is $result"
+        echo "Invalid choice. Please enter a number between 1 and 4."
 
 fi
 
