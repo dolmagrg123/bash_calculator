@@ -17,12 +17,12 @@ get_input() {
         read -p "$prompt_message" user_input
         # Strip leading/trailing whitespace
         user_input=$(echo "$user_input" | xargs)
-        if [ -z "$user_input" ]; then
-            echo "You didn't enter anything. Please try again."
-        else
-            echo "$user_input"
-            return 0
-        fi
+        # if [ -z "$user_input" ]; then
+        #     echo "You didn't enter anything. Please try again."
+        # else
+        #     echo "$user_input"
+        #     return 0
+        # fi
     done
 }
 
