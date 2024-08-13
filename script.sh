@@ -97,11 +97,13 @@ calculator(){
 
 calculator
 
-read -p "Please enter 'Y' to calculate again, or any other key to EXIT " answer
-if [[ $answer == "Y" || $answer == "y" ]];then
-    calculator
-else
-    exit 0
-fi
+while true;do
+    read -p "Please enter 'Y' to calculate again, or any other key to EXIT " answer
+    if [[ $answer == "Y" || $answer == "y" ]];then
+        calculator
+    else
+        exit 0
+    fi
+done
 
 
