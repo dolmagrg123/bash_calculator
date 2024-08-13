@@ -6,6 +6,7 @@
 # Display the result of the operation.
 # Handle division by zero with an appropriate error message.
 
+line="--------------------------------------------"
 main() {
     # Function to get a value with error handling
     get_value() {
@@ -34,10 +35,10 @@ main() {
     get_value "Enter Second Value: " var2
 
     # Display the values entered
-    echo "--------------------------------------------"
+    echo "$line"
     echo "You Entered First value: $var1"
     echo "You Entered Second value: $var2"
-    echo "--------------------------------------------"
+    echo "$line"
 }
 
 main #call the main function
@@ -45,8 +46,8 @@ main #call the main function
 #Function to read input for operator Choice
 choose_operator(){
 echo -e "Choose an operation\n0.To Quit\n1.For Addition\n2.For Subtraction\n3.For Multiplication\n4.For Division\n"
-echo "--------------------------------------------"
-echo "--------------------------------------------"
+echo "$line"
+echo "$line"
 
 # Read user input
 read -p "Enter your choice (0-4): " choice
@@ -65,23 +66,28 @@ if [ "$choice" == "0" ];then
     exit 0 # exit 0 since the program is exiting without any erros
 elif [ "$choice" == "1" ];then
     echo "You selected Option 1."
+    echo "$line"
 	result=$(($var1+$var2))
     echo "$var1 added to $var2 is $result"
 elif [ "$choice" == "2" ];then
     echo "You selected Option 2."
+    echo "$line"
     result=$((var1-var2))
     echo "$var1 subtract $var2 is $result"
 elif [ "$choice" == "3" ];then
     echo "You selected Option 3."
+    echo "$line"
 	result=$((var1*var2))
 	echo "$var1 multiplied by $var2 is $result"
 else
     echo "You selected Option 4."
     #condition to check if value is 0
     if [[ "$var2" == 0 ]];then
+        echo "$line"
         echo "Error: Division by zero not allowed"
 	else
         result=$((var1/var2))
+        echo "$line"
 	    echo "$var1 divided by $var2 is $result"
         echo "Invalid choice. Please enter a number between 1 and 4."
     fi
