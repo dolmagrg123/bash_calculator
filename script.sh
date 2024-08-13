@@ -34,8 +34,10 @@ main() {
     get_value "Enter Second Value: " var2
 
     # Display the values entered
-    echo "First value: $var1"
-    echo "Second value: $var2"
+    echo "--------------------------------------------"
+    echo "You Entered First value: $var1"
+    echo "You Entered Second value: $var2"
+    echo "--------------------------------------------"
 }
 
 main #call the main function
