@@ -6,8 +6,6 @@
 # Display the result of the operation.
 # Handle division by zero with an appropriate error message.
 
-#!/bin/bash
-
 # Function to get a non-null input
 get_input() {
     local prompt_message="$1"
@@ -16,7 +14,7 @@ get_input() {
     while true; do
         read -p "$prompt_message" user_input
         # Strip leading/trailing whitespace
-        user_input=$(echo "$user_input" | xargs)
+        # user_input=$(echo "$user_input" | xargs)
         if [ -z "$user_input" ]; then
             echo "You didn't enter anything. Please try again."
         else
@@ -34,8 +32,6 @@ main() {
     # Get the second value
     var2=$(get_input "Enter the second value: ")
 
-    # Display the entered values
-    echo "You entered: Value 1 = '$var1' and Value 2 = '$var2'"
 }
 
 # Call the main function
