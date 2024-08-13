@@ -57,35 +57,26 @@ while [[ "$choice" != "0" && "$choice" != "1" && "$choice" != "2" && "$choice" !
 done
 
 # Handle the user's input
-case $choice in
-    0)
+if [ "$choice"="0" ];then
         echo "Quitting"
         exit 0
-        ;;
-    1)
+elif [ "$choice"="1"];then
         echo "You selected Option 1."
-	result=$((var1+var2))
+	    result=$((var1+var2))
         echo "$var1 added to $var2 is $result"
-        ;;
-    2)
+elif [ "$choice"="2"];then
         echo "You selected Option 2."
         result=$((var1-var2))
         echo "$var1 subtract $var2 is $result"
-
-	;;
-    3)
+elif [ "$choice"="3"];then
         echo "You selected Option 3."
-	result=$((var1*var2))
-	echo "$var1 multiplied by $var2 is $result"
-        ;;
-    4)
+	    result=$((var1*var2))
+	    echo "$var1 multiplied by $var2 is $result"
+else
         echo "You selected Option 4."
-	result=$((var1/var2))
-	echo "$var1 divided by $var2 is $result"
-        ;;
-    *)
+	    result=$((var1/var2))
+	    echo "$var1 divided by $var2 is $result"
         echo "Invalid choice. Please enter a number between 1 and 4."
-        ;;
-esac
+
 
 
