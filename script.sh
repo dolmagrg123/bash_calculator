@@ -94,10 +94,14 @@ calculator(){
 
     fi
 }
+
+calculator
+
 read -p "Please enter 'Y' to calculate again, or any other key to EXIT " answer
 if [ $answer="Y" or $answer="y" ];then
     calculator
 else
     break
+fi
 
 
