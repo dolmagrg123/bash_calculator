@@ -9,9 +9,9 @@
 main() {
     # Function to get a value with error handling
     get_value() {
-        local prompt="$1"
-        local var_name="$2"
-        local input=""
+        prompt="$1"
+        var_name="$2"
+        input=""
 
         while true; do
             read -p "$prompt" input
