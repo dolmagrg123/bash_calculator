@@ -98,7 +98,9 @@ calculator(){
 calculator
 
 while true;do
-    read -p "Please enter 'Y' to calculate again, or any other key to EXIT " answer
+    echo "$line"
+    read -p "Please enter 'Y' to calculate again, or any other key to EXIT: " answer
+    echo "$line"
     if [[ $answer == "Y" || $answer == "y" ]];then
         calculator
     else
