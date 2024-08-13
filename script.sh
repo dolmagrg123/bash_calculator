@@ -28,10 +28,10 @@ main() {
     }
 
     # Get the first value, call function get_value with first argument as message and second argument var1
-    get_value "Enter first Value: " var1
+    get_value "Enter first Value: \n" var1
 
     # Get the second value, call function get_value with first argument as message and second argument var2
-    get_value "Enter Second Value: " var2
+    get_value "Enter Second Value: \n" var2
 
     # Display the values entered
     echo "First value: $var1"
@@ -43,6 +43,8 @@ main #call the main function
 #Function to read input for operator Choice
 choose_operator(){
 echo -e "Choose an operation\n0.To Quit\n1.For Addition\n2.For Subtraction\n3.For Multiplication\n4.For Division\n"
+echo "--------------------------------------------"
+echo "--------------------------------------------"
 
 # Read user input
 read -p "Enter your choice (0-4): " choice
