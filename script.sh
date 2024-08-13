@@ -7,30 +7,29 @@
 # Handle division by zero with an appropriate error message.
 
 # Function to get a non-null input
-get_input() {
-    local prompt_message="$1"
-    local user_input=""
+# get_input() {
+#     local prompt_message="$1"
+#     local user_input=""
 
-    while true; do
-        read -p "$prompt_message" user_input
-        # Strip leading/trailing whitespace
-        # user_input=$(echo "$user_input" | xargs)
-        if [ -z "$user_input" ]; then
-            echo "You didn't enter anything. Please try again."
-        else
-            echo " You entered $user_input"
-            return 0
-        fi
-    done
-}
+#     while true; do
+#         read -p "$prompt_message" user_input
+#         # Strip leading/trailing whitespace
+#         # user_input=$(echo "$user_input" | xargs)
+#         if [ -z "$user_input" ]; then
+#             echo "You didn't enter anything. Please try again."
+#         else
+#             echo " You entered $user_input"
+#             return 0
+#         fi
+#     done
+# }
 
 # Main script
 main() {
     # Get the first value
-    var1=$(get_input "Enter the first value: ")
-
+        read -p "Enter first Value" var1
     # Get the second value
-    var2=$(get_input "Enter the second value: ")
+        read -p "Enter Second Value" var2
 
 }
 
