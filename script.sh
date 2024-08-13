@@ -67,7 +67,7 @@ if [ "$choice" == "0" ];then
 elif [ "$choice" == "1" ];then
     echo "You selected Option 1."
     echo "$line"
-	result=$(($var1+$var2))
+    result=$(($var1+$var2))
     echo "$var1 added to $var2 is $result"
 elif [ "$choice" == "2" ];then
     echo "You selected Option 2."
@@ -77,8 +77,8 @@ elif [ "$choice" == "2" ];then
 elif [ "$choice" == "3" ];then
     echo "You selected Option 3."
     echo "$line"
-	result=$((var1*var2))
-	echo "$var1 multiplied by $var2 is $result"
+    result=$((var1*var2))
+    echo "$var1 multiplied by $var2 is $result"
 else
     echo "You selected Option 4."
     #condition to check if value is 0
