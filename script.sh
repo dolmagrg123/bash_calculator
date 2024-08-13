@@ -30,7 +30,7 @@ calculator(){
         }
 
         # Get the first value, call function get_value with first argument as message and second argument var1
-        get_value "Enter first Value: " var1
+        get_value "Enter First Value: " var1
 
         # Get the second value, call function get_value with first argument as message and second argument var2
         get_value "Enter Second Value: " var2
@@ -97,6 +97,7 @@ calculator(){
 
 calculator
 
+#loop until it reaches exit statement
 while true;do
     echo "$line"
     read -p "Please enter 'Y' to calculate again, or any other key to EXIT: " answer
@@ -104,6 +105,7 @@ while true;do
     if [[ $answer == "Y" || $answer == "y" ]];then
         calculator
     else
+        echo "GOODBYE!!! Thank you for using our calculator"
         exit 0
     fi
 done
