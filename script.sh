@@ -6,36 +6,36 @@
 # Display the result of the operation.
 # Handle division by zero with an appropriate error message.
 
-# Function to get a non-null input
-# get_input() {
-#     local prompt_message="$1"
-#     local user_input=""
-
-#     while true; do
-#         read -p "$prompt_message" user_input
-#         # Strip leading/trailing whitespace
-#         # user_input=$(echo "$user_input" | xargs)
-#         if [ -z "$user_input" ]; then
-#             echo "You didn't enter anything. Please try again."
-#         else
-#             echo " You entered $user_input"
-#             return 0
-#         fi
-#     done
-# }
-
-# Main script
 main() {
-    # Get the first value
-        read -p "Enter first Value" var1
-    # Get the second value
-        read -p "Enter Second Value" var2
+    # Function to get a value with error handling
+    get_value() {
+        local prompt="$1"
+        local var_name="$2"
+        local input=""
 
+        while true; do
+            read -p "$prompt" input
+            if [[ -z "$input" ]]; then
+                echo "Error: Input cannot be empty. Please try again."
+            else
+                eval "$var_name='$input'"
+                break
+            fi
+        done
+    }
+
+    # Get the first value
+    get_value "Enter first Value: " var1
+
+    # Get the second value
+    get_value "Enter Second Value: " var2
+
+    # Display the values entered
+    echo "First value: $var1"
+    echo "Second value: $var2"
 }
 
-# Call the main function
 main
-
 
 choose_operator(){
 echo -e "Choose an operation\n0.To Quit\n1.For Addition\n2.For Subtraction\n3.For Multiplication\n4.For Division"
