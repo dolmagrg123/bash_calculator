@@ -75,7 +75,8 @@ elif [ "$choice" == "3" ];then
 	echo "$var1 multiplied by $var2 is $result"
 else
     echo "You selected Option 4."
-    if [[ "$var2" == 0]];then #condition to check if value is 0
+    #condition to check if value is 0
+    if [[ "$var2" == 0]];then
         echo "Error: Division by zero not allowed"
 	else
         result=$((var1/var2))
