@@ -88,7 +88,7 @@ else
 	else
         result=$((var1/var2))
         echo "$line"
-	    echo "$var1 divided by $var2 is $result"
+        echo "$var1 divided by $var2 is $result"
     fi
 
 fi
